@@ -18,10 +18,16 @@ install.packages("ggvis")
 #In the Viewer, you may download the graph in SVG or CANVAS format
 iris
 summary(iris)
-## X : Sepal.Length  , Y : Sepal.Width
+## X/Y scatter chart
+## X : Sepal.Length  , Y : Sepal.Width -- using layer_points()
 iris %>% ggvis(~Sepal.Length, ~Sepal.Width, fill = ~Species) %>% layer_points()
-## X : Petal.Length  , Y : Petal.Width
+## X : Petal.Length  , Y : Petal.Width-- using layer_points()
 iris %>% ggvis(~Petal.Length, ~Petal.Width, fill = ~Species) %>% layer_points()
+## X/Y histogram ,grouped by Sepal.length using layer_bars
+iris %>%
+  ggvis(x= ~Sepal.Length, y = ~Sepal.Width, fill=~Sepal.Length) %>%
+  group_by(Sepal.Length) %>% 
+  layer_bars() 
 
 ## Prepare Normalize function##
 normalize <- function(x) {
