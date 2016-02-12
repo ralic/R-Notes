@@ -18,7 +18,10 @@ install.packages("ggvis")
 #In the Viewer, you may download the graph in SVG or CANVAS format
 iris
 summary(iris)
+## X : Sepal.Length  , Y : Sepal.Width
 iris %>% ggvis(~Sepal.Length, ~Sepal.Width, fill = ~Species) %>% layer_points()
+## X : Petal.Length  , Y : Petal.Width
+iris %>% ggvis(~Petal.Length, ~Petal.Width, fill = ~Species) %>% layer_points()
 
 ## Prepare Normalize function##
 normalize <- function(x) {
@@ -79,6 +82,7 @@ iris_pred
 ### 
 install.packages("gmodels")
 library(gmodels)
+
 
 ## Note that the last argument prop.chisq indicates 
 ## whether or not the chi-square contribution of each cell is included. 
