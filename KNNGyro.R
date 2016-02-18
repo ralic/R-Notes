@@ -1,3 +1,6 @@
+## Need to detach SparkR to use knn library.
+detach("package:SparkR", unload=TRUE)
+#CS550(F)-HW1
 KNNGyro <- read.delim("~/@Rscripts/KNNGyro.data")
 View(KNNGyro)
 summary(KNNGyro)
@@ -75,3 +78,4 @@ CrossTable(x = KNNGyro.testLabels, y = KNNGyro_pred, prop.chisq=FALSE)
 test= c(2,3,3,2,3,3)
 falling_detect <- knn(train = KNNGyro.training, test =test, cl = KNNGyro.trainLabels, k=3)
 falling_detect
+
