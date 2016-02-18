@@ -1,0 +1,126 @@
+> ## Curl Examples
+> ## GetHeader for Facebook
+> curlGetHeaders("www.facebook.com") ## 200, allowed
+ [1] "HTTP/1.1 301 Moved Permanently\r\n"                                                                                                                                                                                                                                             
+ [2] "X-Content-Type-Options: nosniff\r\n"                                                                                                                                                                                                                                            
+ [3] "Pragma: no-cache\r\n"                                                                                                                                                                                                                                                           
+ [4] "Location: https://www.facebook.com/\r\n"                                                                                                                                                                                                                                        
+ [5] "Cache-Control: private, no-cache, no-store, must-revalidate\r\n"                                                                                                                                                                                                                
+ [6] "Expires: Sat, 01 Jan 2000 00:00:00 GMT\r\n"                                                                                                                                                                                                                                     
+ [7] "X-Frame-Options: DENY\r\n"                                                                                                                                                                                                                                                      
+ [8] "Vary: Accept-Encoding\r\n"                                                                                                                                                                                                                                                      
+ [9] "Content-Type: text/html\r\n"                                                                                                                                                                                                                                                    
+[10] "X-FB-Debug: r7r9es36ZLQ8Q1TPwlf0RVWxpccgJfE5CAxkG7dW1chFv7eV+WxO2to21ptYMdtGWqsQrSrEasK9gvKXEeaWXQ==\r\n"                                                                                                                                                                       
+[11] "Date: Thu, 18 Feb 2016 12:45:17 GMT\r\n"                                                                                                                                                                                                                                        
+[12] "Connection: keep-alive\r\n"                                                                                                                                                                                                                                                     
+[13] "Content-Length: 0\r\n"                                                                                                                                                                                                                                                          
+[14] "\r\n"                                                                                                                                                                                                                                                                           
+[15] "HTTP/1.1 200 OK\r\n"                                                                                                                                                                                                                                                            
+[16] "Cache-Control: private, no-cache, no-store, must-revalidate\r\n"                                                                                                                                                                                                                
+[17] "Expires: Sat, 01 Jan 2000 00:00:00 GMT\r\n"                                                                                                                                                                                                                                     
+[18] "Pragma: no-cache\r\n"                                                                                                                                                                                                                                                           
+[19] "Public-Key-Pins-Report-Only: max-age=500; pin-sha256=\"WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18=\"; pin-sha256=\"r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=\"; pin-sha256=\"q4PO2G2cbkZhZ82+JgmRUyGMoAeozA+BSXVXQWB8XWQ=\"; report-uri=\"http://reports.fb.com/hpkp/\"\r\n"
+[20] "P3P: CP=\"Facebook does not have a P3P policy. Learn why here: http://fb.me/p3p\"\r\n"                                                                                                                                                                                          
+[21] "Strict-Transport-Security: max-age=15552000; preload\r\n"                                                                                                                                                                                                                       
+[22] "X-XSS-Protection: 0\r\n"                                                                                                                                                                                                                                                        
+[23] "X-Content-Type-Options: nosniff\r\n"                                                                                                                                                                                                                                            
+[24] "X-Frame-Options: DENY\r\n"                                                                                                                                                                                                                                                      
+[25] "Set-Cookie: reg_ext_ref=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.facebook.com; httponly\r\n"                                                                                                                                                  
+[26] "Vary: Accept-Encoding\r\n"                                                                                                                                                                                                                                                      
+[27] "Content-Type: text/html\r\n"                                                                                                                                                                                                                                                    
+[28] "X-FB-Debug: NxUUMGBm8pg40J/zvvv3QGv6gs4wYMwsjZdz0lNG1gvy1TTSX9SuD1AZ2TZoTV4y0nhe+w8NVq0RWyeD+TKnRA==\r\n"                                                                                                                                                                       
+[29] "Date: Thu, 18 Feb 2016 12:45:18 GMT\r\n"                                                                                                                                                                                                                                        
+[30] "Connection: keep-alive\r\n"                                                                                                                                                                                                                                                     
+[31] "Content-Length: 68008\r\n"                                                                                                                                                                                                                                                      
+[32] "\r\n"                                                                                                                                                                                                                                                                           
+attr(,"status")
+[1] 200
+> ## GetHeader for LinkedIn
+> curlGetHeaders("www.linkedin.com") ## 405 not allowed
+ [1] "HTTP/1.1 405 Method Not Allowed\r\n"                                                                                                                                         
+ [2] "Allow: GET\r\n"                                                                                                                                                              
+ [3] "Server: Play\r\n"                                                                                                                                                            
+ [4] "Content-Length: 0\r\n"                                                                                                                                                       
+ [5] "X-FS-UUID: 460aa7e0f2093414400f45fd182b0000\r\n"                                                                                                                             
+ [6] "Date: Thu, 18 Feb 2016 12:45:18 GMT\r\n"                                                                                                                                     
+ [7] "Content-Encoding: \r\n"                                                                                                                                                      
+ [8] "Content-Type: \r\n"                                                                                                                                                          
+ [9] "X-Frame-Options: sameorigin\r\n"                                                                                                                                             
+[10] "X-Content-Type-Options: nosniff\r\n"                                                                                                                                         
+[11] "X-XSS-Protection: 1; mode=block\r\n"                                                                                                                                         
+[12] "X-Li-Fabric: PROD-ELA4\r\n"                                                                                                                                                  
+[13] "Set-Cookie: lang=\"v=2&lang=en-us\"; Path=/; Domain=linkedin.com\r\n"                                                                                                        
+[14] "Set-Cookie: bcookie=\"v=2&3b2f6c86-076c-4686-8c7c-1b64c6e9298d\"; domain=.linkedin.com; Path=/; Expires=Sun, 18-Feb-2018 00:22:50 GMT\r\n"                                   
+[15] "Pragma: no-cache\r\n"                                                                                                                                                        
+[16] "Expires: Thu, 01 Jan 1970 00:00:00 GMT\r\n"                                                                                                                                  
+[17] "Cache-Control: no-cache, no-store\r\n"                                                                                                                                       
+[18] "Connection: keep-alive\r\n"                                                                                                                                                  
+[19] "X-Li-Pop: PROD-ELA4\r\n"                                                                                                                                                     
+[20] "X-LI-UUID: Rgqn4PIJNBRAD0X9GCsAAA==\r\n"                                                                                                                                     
+[21] "Set-Cookie: lidc=\"b=LGST04:g=30:u=1:i=1455799518:t=1455885918:s=AQHD6HzDWbo2KtEqcS-C_Cwas6e77F45\"; Expires=Fri, 19 Feb 2016 12:45:18 GMT; domain=.linkedin.com; Path=/\r\n"
+[22] "\r\n"                                                                                                                                                                        
+attr(,"status")
+[1] 405
+> ## GetHeader for Apple
+> curlGetHeaders("www.apple.com") ## 200, allowed
+ [1] "HTTP/1.1 200 OK\r\n"                       
+ [2] "Server: Apache\r\n"                        
+ [3] "Accept-Ranges: bytes\r\n"                  
+ [4] "Content-Type: text/html; charset=UTF-8\r\n"
+ [5] "Content-Length: 26549\r\n"                 
+ [6] "Cache-Control: max-age=278\r\n"            
+ [7] "Expires: Thu, 18 Feb 2016 12:49:56 GMT\r\n"
+ [8] "Date: Thu, 18 Feb 2016 12:45:18 GMT\r\n"   
+ [9] "Connection: keep-alive\r\n"                
+[10] "\r\n"                                      
+attr(,"status")
+[1] 200
+> ## GetHeader for Google
+> curlGetHeaders("www.google.com") ## 200, allowed
+ [1] "HTTP/1.1 302 Found\r\n"                                                                                                                                                                                                                 
+ [2] "Location: http://www.google.com.hk/url?sa=p&hl=zh-CN&pref=hkredirect&pval=yes&q=http://www.google.com.hk/%3Fgws_rd%3Dcr&ust=1455799548629715&usg=AFQjCNG29_AWNpr042lPxDpZYXi2ulqWzg\r\n"                                                
+ [3] "Cache-Control: private\r\n"                                                                                                                                                                                                             
+ [4] "Content-Type: text/html; charset=UTF-8\r\n"                                                                                                                                                                                             
+ [5] "Date: Thu, 18 Feb 2016 12:45:18 GMT\r\n"                                                                                                                                                                                                
+ [6] "Server: gws\r\n"                                                                                                                                                                                                                        
+ [7] "Content-Length: 390\r\n"                                                                                                                                                                                                                
+ [8] "X-XSS-Protection: 1; mode=block\r\n"                                                                                                                                                                                                    
+ [9] "X-Frame-Options: SAMEORIGIN\r\n"                                                                                                                                                                                                        
+[10] "\r\n"                                                                                                                                                                                                                                   
+[11] "HTTP/1.1 302 Found\r\n"                                                                                                                                                                                                                 
+[12] "Location: http://www.google.com.hk/?gws_rd=cr\r\n"                                                                                                                                                                                      
+[13] "Cache-Control: private\r\n"                                                                                                                                                                                                             
+[14] "Content-Type: text/html; charset=UTF-8\r\n"                                                                                                                                                                                             
+[15] "P3P: CP=\"This is not a P3P policy! See https://www.google.com/support/accounts/answer/151657?hl=en for more info.\"\r\n"                                                                                                               
+[16] "Date: Thu, 18 Feb 2016 12:45:18 GMT\r\n"                                                                                                                                                                                                
+[17] "Server: gws\r\n"                                                                                                                                                                                                                        
+[18] "Content-Length: 232\r\n"                                                                                                                                                                                                                
+[19] "X-XSS-Protection: 1; mode=block\r\n"                                                                                                                                                                                                    
+[20] "Set-Cookie: NID=76=QK6kt0UD-86furAr0Ipi2_5hDBZp4ffuzn5-ZHl9CXjTuTrjOSbRTMwJeEjRAoJKNWfDqKXdvB0rj205EEtElFxaM8zlbyMaksJ7MS0gMSnvgj82QFaP3ONWf_Hmwt7V; expires=Fri, 19-Aug-2016 12:45:18 GMT; path=/; domain=.google.com.hk; HttpOnly\r\n"
+[21] "\r\n"                                                                                                                                                                                                                                   
+[22] "HTTP/1.1 200 OK\r\n"                                                                                                                                                                                                                    
+[23] "Date: Thu, 18 Feb 2016 12:45:19 GMT\r\n"                                                                                                                                                                                                
+[24] "Expires: -1\r\n"                                                                                                                                                                                                                        
+[25] "Cache-Control: private, max-age=0\r\n"                                                                                                                                                                                                  
+[26] "Content-Type: text/html; charset=GB2312\r\n"                                                                                                                                                                                            
+[27] "P3P: CP=\"This is not a P3P policy! See https://www.google.com/support/accounts/answer/151657?hl=en for more info.\"\r\n"                                                                                                               
+[28] "Server: gws\r\n"                                                                                                                                                                                                                        
+[29] "X-XSS-Protection: 1; mode=block\r\n"                                                                                                                                                                                                    
+[30] "X-Frame-Options: SAMEORIGIN\r\n"                                                                                                                                                                                                        
+[31] "Set-Cookie: NID=76=cJ7Kuns8e_dQiMBrwaQgYOCGo8phdm5r4E-yQhJt9NEUKNXQTUB-d9Z3sVvma6VkPLelD5CdW39JtB2MECB7xAS1HLYbJjRjcYJ6ZLld4mFMVC7XjxWN9RkctcGC4i9B; expires=Fri, 19-Aug-2016 12:45:19 GMT; path=/; domain=.google.com.hk; HttpOnly\r\n"
+[32] "Transfer-Encoding: chunked\r\n"                                                                                                                                                                                                         
+[33] "Accept-Ranges: none\r\n"                                                                                                                                                                                                                
+[34] "Vary: Accept-Encoding\r\n"                                                                                                                                                                                                              
+[35] "\r\n"                                                                                                                                                                                                                                   
+attr(,"status")
+[1] 200
+> 
+> 
+> ## Download Facebook's homepage
+> curl::curl_download("www.facebook.com","facebook.html")
+> ## Download LinkedIn's homepage
+> curl::curl_download("www.linkedin.com","linkedin.html")
+> ## Download Apple's homepage
+> curl::curl_download("www.apple.com","apple.html")
+> ## Download Google's homepage
+> curl::curl_download("www.google.com","google.html")
